@@ -19,7 +19,7 @@ function App() {
   useEffect(() => {
     setRender(render + 1);
     setData(null);
-    // Make a request for a user with a given ID
+    // // Make a request for a user with a given ID
     axios
       .get(
         `https://api.nasa.gov/planetary/apod?api_key=${API_KEY}&count=3`
@@ -62,7 +62,7 @@ function App() {
           <div className="row">
             {selectedAPOD.title} - {selectedAPOD.date}
           </div>
-          <div className="row grow flex-center">bişi</div>
+          <div className="row grow flex-center">{selectedAPOD.explanation}</div>
           <div className="row">Copyrigt</div>
         </div>
         <div className="column grow">
